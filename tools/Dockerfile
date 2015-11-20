@@ -1,4 +1,4 @@
-FROM jitpack/dockerfiles:base
+FROM jitpack/base
 
 MAINTAINER jitpack <jitpack@jitpack.io>
 
