@@ -12,6 +12,7 @@ RUN apt-get install -y software-properties-common && add-apt-repository -y ppa:w
     apt-get update && \ 
 	apt-get install -y git curl unzip \
 	oracle-java7-installer \
-	oracle-java8-installer
+	oracle-java8-installer && \
+	apt-get clean
 
 RUN adduser --disabled-password --gecos '' jitpack
