@@ -19,4 +19,5 @@ ENV ANDROID_BUILD_TOOLS_VERSION 23.0.2
 ENV ANDROID_API_LEVELS android-18,android-19,android-20,android-21,android-22,android-23
 
 COPY accept-licenses.sh /opt/
+
 RUN /opt/accept-licenses.sh "android update sdk --no-ui -a --filter tools,platform-tools,${ANDROID_API_LEVELS},extra-android-support,extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services,build-tools-${ANDROID_BUILD_TOOLS_VERSION}"
