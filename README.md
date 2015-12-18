@@ -1,6 +1,6 @@
 # dockerfiles
 
-- base
-- tools
-- android (includes the above)
+- base  (jdks)
+- tools (build tools - maven, gradle, sbt)
+- android (includes the above and Android SDK)
 
