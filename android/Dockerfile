@@ -15,8 +15,8 @@ RUN curl -sL http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz | gunzip
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-ENV API_LEVELS android-18,android-19,android-20,android-21,android-22,android-23
-ENV BUILD_TOOLS=build-tools-23.0.1,build-tools-23.0.2
+ENV API_LEVELS android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25
+ENV BUILD_TOOLS=build-tools-25,build-tools-25.0.3
 
 COPY accept-licenses.sh /opt/
 
