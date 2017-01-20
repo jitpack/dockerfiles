@@ -14,7 +14,7 @@ RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/0.13.8/sbt-0.13.8.tg
 RUN ln -s /opt/sbt/bin/sbt /usr/local/bin
 
 # get gradle
-ENV GRADLE_VERSION 2.10
+ENV GRADLE_VERSION 3.3
 RUN wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
 RUN unzip "gradle-${GRADLE_VERSION}-bin.zip"
 RUN ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/local/bin
