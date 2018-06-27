@@ -14,5 +14,5 @@ RUN dpkg --add-architecture i386 && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 RUN adduser --disabled-password --gecos '' jitpack
-USER jitpack
-WORKDIR /home/jitpack
+#USER jitpack
+#WORKDIR /home/jitpack
