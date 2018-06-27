@@ -5,17 +5,18 @@ MAINTAINER jitpack <jitpack@jitpack.io>
 WORKDIR /opt
 
 # get maven 
-RUN curl -sL http://mirrors.ukfast.co.uk/sites/ftp.apache.org/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz | gunzip | tar -x -C /opt
-RUN ln -s /opt/apache-maven-3.3.3/bin/mvn /usr/local/bin
-RUN mvn help:help
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.zip && \
+    unzip apache-maven-3.5.3-bin.zip && \
+    ln -s /opt/apache-maven-3.5.3/bin/mvn /usr/local/bin && \
+    rm apache-maven-3.5.3-bin.zip
 
 # get sbt
-RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/0.13.8/sbt-0.13.8.tgz" | gunzip | tar -x -C /opt
-RUN ln -s /opt/sbt/bin/sbt /usr/local/bin
+RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/0.13.15/sbt-0.13.15.tgz" | gunzip | tar -x -C /opt && \
+    ln -s /opt/sbt/bin/sbt /usr/local/bin
 
 # get gradle
-ENV GRADLE_VERSION 3.4
-RUN wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
-RUN unzip "gradle-${GRADLE_VERSION}-bin.zip"
-RUN ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/local/bin
-RUN rm "gradle-${GRADLE_VERSION}-bin.zip"
+ENV GRADLE_VERSION 4.8.1
+RUN wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
+    unzip "gradle-${GRADLE_VERSION}-bin.zip" && \
+    ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/local/bin && \
+    rm "gradle-${GRADLE_VERSION}-bin.zip"
