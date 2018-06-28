@@ -2,7 +2,10 @@ FROM jitpack/tools
 
 MAINTAINER jitpack <jitpack@jitpack.io>
 
+ENV ANDROID_SDK /opt/android-sdk-linux
 ENV ANDROID_HOME /opt/android-sdk-linux
+ENV ANDROID_SDK_HOME /opt/android-sdk-linux
+ENV ANDROID_SDK_ROOT /opt/android-sdk-linux
 WORKDIR /opt
 
 RUN dpkg --add-architecture i386 && \
@@ -26,7 +29,6 @@ RUN sdkmanager "tools" "platform-tools"
 RUN yes | sdkmanager \
     "ndk-bundle" \
     "build-tools;28.0.0" \
-    "extras;android;support" \
     "extras;android;m2repository" \
     "extras;google;m2repository" \
     "extras;google;google_play_services" \
