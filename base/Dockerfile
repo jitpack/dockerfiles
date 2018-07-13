@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk
+FROM ubuntu:16.04
 
 MAINTAINER jitpack <jitpack@jitpack.io>
 
