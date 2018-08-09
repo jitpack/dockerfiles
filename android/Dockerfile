@@ -35,4 +35,4 @@ RUN yes | sdkmanager \
     "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
     "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1"
 
-chown -R jitpack:jitpack ${ANDROID_HOME}
+RUN chown -R jitpack:jitpack ${ANDROID_HOME}
