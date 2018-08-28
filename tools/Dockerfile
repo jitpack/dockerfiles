@@ -20,3 +20,7 @@ RUN wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin
     unzip "gradle-${GRADLE_VERSION}-bin.zip" && \
     ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/local/bin && \
     rm "gradle-${GRADLE_VERSION}-bin.zip"
+
+RUN curl -sL https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/local/bin/lein && \
+    chmod 755 /usr/local/bin/lein && lein -v
+
