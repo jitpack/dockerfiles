@@ -24,3 +24,4 @@ RUN wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin
 RUN curl -sL https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/local/bin/lein && \
     chmod 755 /usr/local/bin/lein && lein -v
 
+RUN apt-get update && apt-get install -y python
