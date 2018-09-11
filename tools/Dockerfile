@@ -25,3 +25,10 @@ RUN curl -sL https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/
     chmod 755 /usr/local/bin/lein && lein -v
 
 RUN apt-get update && apt-get install -y python
+
+# get ant
+RUN wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.0-bin.zip && \
+    unzip apache-ant-1.10.0-bin.zip && \
+    ln -s /opt/apache-ant-1.10.0/bin/ant /usr/local/bin && \
+    rm apache-ant-1.10.0-bin.zip
+
