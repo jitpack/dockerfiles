@@ -16,8 +16,11 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 RUN adduser --disabled-password --gecos '' jitpack
 
 WORKDIR /usr/lib/jvm
-RUN wget https://download.java.net/java/GA/jdk10/10/binaries/openjdk-10_linux-x64_bin.tar.gz && \
-    tar xfz openjdk-10_linux-x64_bin.tar.gz && rm openjdk-10_linux-x64_bin.tar.gz
+# RUN wget https://download.java.net/java/GA/jdk10/10/binaries/openjdk-10_linux-x64_bin.tar.gz && \
+#    tar xfz openjdk-10_linux-x64_bin.tar.gz && rm openjdk-10_linux-x64_bin.tar.gz
+
+RUN wget https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz && \
+    tar xfz openjdk-11+28_linux-x64_bin.tar.gz && rm openjdk-11+28_linux-x64_bin.tar.gz
 
 #USER jitpack
 #WORKDIR /home/jitpack
