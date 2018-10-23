@@ -32,3 +32,5 @@ RUN wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.0-bin.zip 
     ln -s /opt/apache-ant-1.10.0/bin/ant /usr/local/bin && \
     rm apache-ant-1.10.0-bin.zip
 
+#RUN apt-get update && apt-get install docker.io cgroup-lite screen -y && apt-get clean && \
+#    cgroups-mount && screen -dmS docker_daemon dockerd -D && docker info
