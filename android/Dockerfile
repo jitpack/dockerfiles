@@ -35,4 +35,8 @@ RUN yes | sdkmanager \
     "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
     "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1"
 
-RUN chown -R jitpack:jitpack ${ANDROID_HOME}
+RUN chown -R jitpack:jitpack ${ANDROID_HOME} && \
+    cd  /opt/android-sdk-linux/ndk-bundle/toolchains && \
+    ln -s aarch64-linux-android-4.9 mips64el-linux-android && \
+    ln -s arm-linux-androideabi-4.9 mipsel-linux-android
+    
