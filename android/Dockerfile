@@ -12,8 +12,7 @@ RUN dpkg --add-architecture i386 && \
 	apt-get update && \
     apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 expect && \
     apt-get clean && \
-    apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/* /var/cache/apt
+    apt-get autoremove -y
 
 RUN wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip && \
     unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} && \
