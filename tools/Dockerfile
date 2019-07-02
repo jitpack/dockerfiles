@@ -5,10 +5,10 @@ MAINTAINER jitpack <jitpack@jitpack.io>
 WORKDIR /opt
 
 # get maven 
-RUN wget https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.zip && \
-    unzip apache-maven-3.5.3-bin.zip && \
-    ln -s /opt/apache-maven-3.5.3/bin/mvn /usr/local/bin && \
-    rm apache-maven-3.5.3-bin.zip
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.zip && \
+    unzip apache-maven-3.6.1-bin.zip && \
+    ln -s /opt/apache-maven-3.6.1/bin/mvn /usr/local/bin && \
+    rm apache-maven-3.6.1-bin.zip
 
 # get sbt
 RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/0.13.15/sbt-0.13.15.tgz" | gunzip | tar -x -C /opt && \
