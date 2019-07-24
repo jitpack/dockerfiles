@@ -24,13 +24,16 @@ RUN wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin
 RUN curl -sL https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/local/bin/lein && \
     chmod 755 /usr/local/bin/lein && lein -v
 
-RUN apt-get update && apt-get install -y python
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+RUN apt-get update && apt-get install -y python git-lfs
 
 # get ant
 RUN wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.0-bin.zip && \
     unzip apache-ant-1.10.0-bin.zip && \
     ln -s /opt/apache-ant-1.10.0/bin/ant /usr/local/bin && \
     rm apache-ant-1.10.0-bin.zip
+
+RUN su jitpack -c 'curl -s "https://get.sdkman.io" | bash'
 
 #RUN apt-get update && apt-get install docker.io cgroup-lite screen -y && apt-get clean && \
 #    cgroups-mount && screen -dmS docker_daemon dockerd -D && docker info

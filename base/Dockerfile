@@ -27,5 +27,3 @@ RUN wget https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990e
 # Java 10
 RUN cp -v /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts /usr/lib/jvm/jdk-10/lib/security
 
-#USER jitpack
-#WORKDIR /home/jitpack
