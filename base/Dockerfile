@@ -24,6 +24,9 @@ RUN wget https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_
 RUN wget https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_linux-x64_bin.tar.gz && \
     tar xfz openjdk-12.0.1_linux-x64_bin.tar.gz && rm openjdk-12.0.1_linux-x64_bin.tar.gz && mv jdk-12.0.1 jdk-12
 
+RUN wget https://download.java.net/java/GA/jdk13/5b8a42f3905b406298b72d750b6919f6/33/GPL/openjdk-13_linux-x64_bin.tar.gz && \
+    tar xfz openjdk-13_linux-x64_bin.tar.gz && rm openjdk-13_linux-x64_bin.tar.gz
+
 # Java 10
 RUN cp -v /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts /usr/lib/jvm/jdk-10/lib/security
 
