@@ -9,8 +9,8 @@ ENV ANDROID_SDK_ROOT /opt/android-sdk-linux
 WORKDIR /opt
 
 RUN dpkg --add-architecture i386 && \
-	apt-get update && \
-    apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 expect make && \
+	apt-get -qqy update && \
+    apt-get -qqy install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 expect make && \
     apt-get clean && \
     apt-get autoremove -y
 
