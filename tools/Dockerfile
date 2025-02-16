@@ -5,10 +5,10 @@ MAINTAINER jitpack <jitpack@jitpack.io>
 WORKDIR /opt
 
 # get maven 
-RUN wget -nv https://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.zip && \
-    unzip apache-maven-3.6.1-bin.zip && \
-    ln -s /opt/apache-maven-3.6.1/bin/mvn /usr/local/bin && \
-    rm apache-maven-3.6.1-bin.zip
+RUN wget -nv https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip && \
+    unzip apache-maven-3.6.3-bin.zip && \
+    ln -s /opt/apache-maven-3.6.3/bin/mvn /usr/local/bin && \
+    rm apache-maven-3.6.3-bin.zip
 
 # get gradle
 ENV GRADLE_VERSION 4.8.1
